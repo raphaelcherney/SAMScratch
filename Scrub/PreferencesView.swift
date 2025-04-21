@@ -60,12 +60,12 @@ struct PreferencesView: View {
             }.disabled(preferences.isHomeLocked)
             
             // Support
-            Section(header: HStack {
-                Label("Support", systemImage: "message")
-            }.font(.headline)) {
-                WebLink(title: Text("GitHub"), destination: URL(string: "https://github.com/bricklife/Scrub")!)
-                WebLink(title: Text("Twitter: @ooba"), destination: URL(string: "https://twitter.com/ooba")!)
-            }
+//            Section(header: HStack {
+//                Label("Support", systemImage: "message")
+//            }.font(.headline)) {
+//                WebLink(title: Text("GitHub"), destination: URL(string: "https://github.com/bricklife/Scrub")!)
+//                WebLink(title: Text("Twitter: @ooba"), destination: URL(string: "https://twitter.com/ooba")!)
+//            }
             
             // Version
             Section {
