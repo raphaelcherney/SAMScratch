@@ -16,9 +16,8 @@ private let didShowBluetoothParingDialogKey = "didShowBluetoothParingDialog"
 class Preferences: ObservableObject {
     
     enum Home: String {
-        case scratchHome
+        case samScratch
         case scratchEditor
-        case scratchMyStuff
         case customUrl
         case documentsFolder
     }
@@ -27,7 +26,7 @@ class Preferences: ObservableObject {
         get {
             ManagedAppConfig.shared.rawRepresentable(forKey: homeKey)
             ?? UserDefaults.standard.rawRepresentable(forKey: homeKey)
-            ?? .scratchEditor
+            ?? .samScratch
         }
         set {
             if !isHomeLocked {

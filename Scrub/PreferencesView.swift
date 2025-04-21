@@ -22,21 +22,15 @@ struct PreferencesView: View {
             }.font(.headline)) {
                 Button {
                     closeKeyboard()
-                    preferences.home = .scratchHome
+                    preferences.home = .samScratch
                 } label: {
-                    CheckmarkText(title: Text("Scratch - Home"), checked: preferences.home == .scratchHome)
+                    CheckmarkText(title: Text("SAM Scratch"), checked: preferences.home == .samScratch)
                 }
                 Button {
                     closeKeyboard()
                     preferences.home = .scratchEditor
                 } label: {
-                    CheckmarkText(title: Text("Scratch - Editor (Create New Project)"), checked: preferences.home == .scratchEditor)
-                }
-                Button {
-                    closeKeyboard()
-                    preferences.home = .scratchMyStuff
-                } label: {
-                    CheckmarkText(title: Text("Scratch - My Stuff"), checked: preferences.home == .scratchMyStuff)
+                    CheckmarkText(title: Text("MIT Scratch"), checked: preferences.home == .scratchEditor)
                 }
                 Button {
                     closeKeyboard()
@@ -60,12 +54,12 @@ struct PreferencesView: View {
             }.disabled(preferences.isHomeLocked)
             
             // Support
-            Section(header: HStack {
-                Label("Support", systemImage: "message")
-            }.font(.headline)) {
-                WebLink(title: Text("GitHub"), destination: URL(string: "https://github.com/bricklife/Scrub")!)
-                WebLink(title: Text("Twitter: @ooba"), destination: URL(string: "https://twitter.com/ooba")!)
-            }
+//            Section(header: HStack {
+//                Label("Support", systemImage: "message")
+//            }.font(.headline)) {
+//                WebLink(title: Text("GitHub"), destination: URL(string: "https://github.com/bricklife/Scrub")!)
+//                WebLink(title: Text("Twitter: @ooba"), destination: URL(string: "https://twitter.com/ooba")!)
+//            }
             
             // Version
             Section {
