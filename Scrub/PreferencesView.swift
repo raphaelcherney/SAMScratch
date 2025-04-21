@@ -22,21 +22,15 @@ struct PreferencesView: View {
             }.font(.headline)) {
                 Button {
                     closeKeyboard()
-                    preferences.home = .scratchHome
+                    preferences.home = .samScratch
                 } label: {
-                    CheckmarkText(title: Text("Scratch - Home"), checked: preferences.home == .scratchHome)
+                    CheckmarkText(title: Text("SAM Scratch"), checked: preferences.home == .samScratch)
                 }
                 Button {
                     closeKeyboard()
                     preferences.home = .scratchEditor
                 } label: {
-                    CheckmarkText(title: Text("Scratch - Editor (Create New Project)"), checked: preferences.home == .scratchEditor)
-                }
-                Button {
-                    closeKeyboard()
-                    preferences.home = .scratchMyStuff
-                } label: {
-                    CheckmarkText(title: Text("Scratch - My Stuff"), checked: preferences.home == .scratchMyStuff)
+                    CheckmarkText(title: Text("MIT Scratch"), checked: preferences.home == .scratchEditor)
                 }
                 Button {
                     closeKeyboard()
